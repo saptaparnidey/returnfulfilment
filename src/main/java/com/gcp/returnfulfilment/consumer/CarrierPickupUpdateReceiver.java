@@ -1,8 +1,5 @@
 package com.gcp.returnfulfilment.consumer;
 
-import com.google.cloud.pubsub.v1.AckReplyConsumer;
-import com.google.cloud.pubsub.v1.MessageReceiver;
-import com.google.pubsub.v1.PubsubMessage;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.cloud.gcp.pubsub.support.BasicAcknowledgeablePubsubMessage;
@@ -12,11 +9,11 @@ import org.springframework.messaging.handler.annotation.Header;
 import org.springframework.stereotype.Component;
 
 @Component
-public class CarrierPickupUpdateReceiver {
+public class CarrierPickupUpdateReceiver{
 
     private Log log = LogFactory.getLog(CarrierPickupUpdateReceiver.class);
 
-    // Define what happens to the messages arriving in the message channel.
+     //Define what happens to the messages arriving in the message channel.
     @ServiceActivator(inputChannel = "inputMessageChannel")
     public void messageReceiver(
             String payload,
@@ -24,4 +21,11 @@ public class CarrierPickupUpdateReceiver {
         log.info("Message arrived via an inbound channel adapter from s.carrierupdate! Payload: " + payload);
         message.ack();
     }
+
+
+//    @Override
+//    public void receiveMessage(PubsubMessage pubsubMessage, AckReplyConsumer ackReplyConsumer) {
+//        log.info("Received Message from s.carrierupdate!: "+pubsubMessage.getData().toStringUtf8());
+//        ackReplyConsumer.ack();
+//    }
 }

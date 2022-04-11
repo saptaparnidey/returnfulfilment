@@ -21,11 +21,4 @@ public class CarrierPickupUpdateReceiver{
         log.info("Message arrived via an inbound channel adapter from s.carrierupdate! Payload: " + payload);
         message.ack();
     }
-
-
-//    @Override
-//    public void receiveMessage(PubsubMessage pubsubMessage, AckReplyConsumer ackReplyConsumer) {
-//        log.info("Received Message from s.carrierupdate!: "+pubsubMessage.getData().toStringUtf8());
-//        ackReplyConsumer.ack();
-//    }
 }

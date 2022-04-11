@@ -29,7 +29,7 @@
 			<dependency>
 				<groupId>com.google.cloud</groupId>
 				<artifactId>libraries-bom</artifactId>
-				<version>24.4.0</version>
+				<version>25.0.0</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
@@ -56,6 +56,13 @@
 		<dependency>
 			<groupId>com.google.cloud</groupId>
 			<artifactId>google-cloud-core</artifactId>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.google.cloud/google-cloud-workflow-executions -->
+		<dependency>
+			<groupId>com.google.cloud</groupId>
+			<artifactId>google-cloud-workflow-executions</artifactId>
+			<version>2.1.5</version>
 		</dependency>
 
 		<dependency>

@@ -28,8 +28,8 @@ public class PublishCarrierPickupReq {
     }
 
     public String publishMessage(String message) throws Exception {
-        String projectName = "returnfulfilmentpoc";
-        String topicName = "t.publishcarrierupdate";
+        String projectName = "returnfulfilment-demo";
+        String topicName = "t.test_topic";
 
         ProjectTopicName topic = ProjectTopicName.of(projectName,topicName);
 
